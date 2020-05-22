@@ -1,0 +1,8 @@
+body {
+  margin: 10;
+  font-family: sans-serif;
+}
+
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}

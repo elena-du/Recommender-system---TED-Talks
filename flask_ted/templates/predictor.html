@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Predictions</title>
+
+{% endblock %}
+
+{% block body %}
+
+<ul>
+   {% for i in range (1,4) %}
+    <li> Item {{ i }} </li>
+   {%  endfor %}
+</ul>
+
+<form action="/predict" method="POST">
+    What is on your mind:<br>
+  <input type="text" name="topic" id="topic" value="robots">
+  <br><br>
+  <input type="submit" name="action" value="Submit">
+</form>
+
+{{ recommendation | safe}}
+
+{% endblock %}

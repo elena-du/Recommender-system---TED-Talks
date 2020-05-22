@@ -1,0 +1,9 @@
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+.topic {
+    height: 25px;
+    width: 25px;
+}

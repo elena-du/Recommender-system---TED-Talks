@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>TED Talk Recommender</title>
+<link rel="stylesheet" type="text/css" href="static/css/df_style.css"/>
+<link rel="stylesheet" type="text/css" href="static/css/form_style.css"/>
+{% endblock %}
+
+{% block body %}
+<div id = 'imgdiv'>
+  <img src="static/TED1.png"
+</div>
+
+<div id = 'textdiv'>
+  <h1> Your Next Awesome TED Talk </h1>
+  <p>All TED Talks are good, yet ones are better than others. Using all the information you type in below,
+    sentiment analysis of comments on youtube we spot your next favorite talk. <br>
+  </p>
+</div>
+
+<div>
+<form action="/" method="POST">
+    <h3>What's on your mind: </h3>
+    <input class="form-control" name="topic" id="topic" type="text" placeholder="Your Thoughts" area-label="Your Thoughts">
+
+    <br>
+    <br>
+    <input type="submit" name="action" value="Get Recommendation">
+    <br>
+    <br>
+</form>
+</div>
+
+<div>
+{{ recommendation | safe}}
+</div>
+
+<div>
+<iframe src="{{ emb | safe }}" width="853" height="480" frameborder="0" allowfullscreen></iframe>
+</div>
+{% endblock %}
+
+
+
+
+
+  hello_world2
